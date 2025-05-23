@@ -1,0 +1,13 @@
+numpy
+numba
+cython
+scikit-optimize
+pyDOE2
+statsmodels
+matplotlib
+pandas
+rich
+scikit-learn
+scipy
+psutil
+cma
