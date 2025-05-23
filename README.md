@@ -5,14 +5,30 @@ Adaptive benchmarking of self-attention in NumPy, Numba & Cython (+OpenMP), with
 
 ## Objective 
 
+## Objective
 
-The goal of this project is to design and evaluate efficient parallel implementations of the scaled dot-product attention mechanism, defined as:
+The goal of this project is to design and evaluate efficient parallel implementations of the **scaled dot-product attention** mechanism, defined as:
 
-\[
-\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\!\bigl(\tfrac{Q K^\top}{\sqrt{d}}\bigr)\,V,
-\]
+`Attention(Q, K, V) = softmax((Q · K<sup>T</sup>) / √d) · V`
 
-where \(Q\), \(K\), and \(V\) are the query, key, and value matrices, and \(d\) is the dimension of the key vectors. We provide three reference backends—NumPy (sequential), Numba (JIT-compiled), and Cython with OpenMP multithreading—and develop an adaptive benchmarking framework that automatically tunes threading, block sizes, and data types using several advanced statistical methods. By measuring speed-up, parallel efficiency, and variability across a range of sequence lengths, our objective is to identify the best configuration for each scenario, ensuring both correctness and maximum performance.
+where:
+
+- `Q`, `K`, and `V` are the query, key and value matrices  
+- `d` is the dimensionality of the key vectors  
+
+We provide three reference backends—**NumPy** (sequential), **Numba** (JIT-compiled), and **Cython + OpenMP** (multithreaded)—and build an **adaptive benchmarking framework** that automatically tunes:
+
+- number of threads  
+- block sizes  
+- data types  
+
+using several advanced statistical-based strategies (Random Search, Hyperband, Multi-armed Bandits, CMA-ES, Bayesian Optimization and DOE-RSM). By measuring:
+
+- **speed-up** relative to NumPy (our benchmark)
+- **parallel efficiency** (speed-up ÷ thread count)  
+- **variability** (standard deviation)  
+
+across a wide range of sequence lengths, our objective is to identify the optimal configuration for each scenario, ensuring both numerical correctness and maximum throughput.  
 
 ## Installation
 
