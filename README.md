@@ -8,10 +8,15 @@ Adaptive benchmarking of self-attention in NumPy, Numba & Cython (+OpenMP), with
 ## Installation
 
 ```bash
-git clone <url>
-cd prog_parallele_adaptive
-make deps
-make build
-
+git clone https://github.com/cominho/Programmation-parallele-pour-le-Machine-Learning-3A
 ```
-## Usage  
+And then run the following code on your terminal 
+
+```bash
+rm -rf build/ dist/ *.egg-info
+python env.py build_ext --inplace
+pip install -e .
+```
+Then, use the notebook "main" (in notebooks/main.ipynb) to run the code. 
+
+
