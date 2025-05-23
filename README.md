@@ -30,9 +30,18 @@ across a wide range of sequence lengths, our objective is to identify the optima
 
 ## Installation
 
+Clone the repo 
+
 ```bash
 git clone https://github.com/cominho/Programmation-parallele-pour-le-Machine-Learning-3A
 ```
+
+Install the requirements 
+
+```bash
+pip install -r requirements.txt
+```
+
 And then run the following code on your terminal 
 
 ```bash
@@ -40,6 +49,6 @@ rm -rf build/ dist/ *.egg-info
 python setup.py build_ext --inplace
 pip install -e .
 ```
-Then, use the notebook "main" (in notebooks/main.ipynb) to run the code. 
+Finally, use the notebook "main" (in notebooks/main.ipynb) to run the code. 
 
 
