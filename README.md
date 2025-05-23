@@ -5,6 +5,15 @@ Adaptive benchmarking of self-attention in NumPy, Numba & Cython (+OpenMP), with
 
 ## Objective 
 
+
+The goal of this project is to design and evaluate efficient parallel implementations of the scaled dot-product attention mechanism, defined as:
+
+\[
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\!\bigl(\tfrac{Q K^\top}{\sqrt{d}}\bigr)\,V,
+\]
+
+where \(Q\), \(K\), and \(V\) are the query, key, and value matrices, and \(d\) is the dimension of the key vectors. We provide three reference backends—NumPy (sequential), Numba (JIT-compiled), and Cython with OpenMP multithreading—and develop an adaptive benchmarking framework that automatically tunes threading, block sizes, and data types using several advanced statistical methods. By measuring speed-up, parallel efficiency, and variability across a range of sequence lengths, our objective is to identify the best configuration for each scenario, ensuring both correctness and maximum performance.
+
 ## Installation
 
 ```bash
