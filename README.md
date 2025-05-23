@@ -37,7 +37,7 @@ And then run the following code on your terminal
 
 ```bash
 rm -rf build/ dist/ *.egg-info
-python env.py build_ext --inplace
+python setup.py build_ext --inplace
 pip install -e .
 ```
 Then, use the notebook "main" (in notebooks/main.ipynb) to run the code. 
