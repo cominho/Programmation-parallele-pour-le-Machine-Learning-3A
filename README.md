@@ -3,8 +3,6 @@ Projet dans le cadre du cours de Programmation parallèle pour le Machine Learni
 
 Adaptive benchmarking of self-attention in NumPy, Numba & Cython (+OpenMP), with serveral statistical-based search methods for best parallel settings.
 
-## Objective 
-
 ## Objective
 
 The goal of this project is to design and evaluate efficient parallel implementations of the **scaled dot-product attention** mechanism, defined as:
