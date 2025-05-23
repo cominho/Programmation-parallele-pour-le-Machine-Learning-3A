@@ -1,0 +1,19 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Cython builds
+*.so
+*.cpp
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Results (only CSV summaries kept)
+results/*
+
+# OS
+.DS_Store
