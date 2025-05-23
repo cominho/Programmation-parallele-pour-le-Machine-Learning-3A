@@ -32,7 +32,7 @@ extensions = [
 ]
 
 setup(
-    name="prog_parallele_adaptive",
+    name="prog_parallele_ml_3A",
     version="0.1.0",
     packages=find_packages(),  # will find att_bench_lib and src.benchmark
     ext_modules=cythonize(
